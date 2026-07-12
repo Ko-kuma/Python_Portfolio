@@ -2,6 +2,7 @@
 # 웹(브라우저) 버전 진입점 — Streamlit이 HTML/CSS/JS로 자동 변환해주는 부분.
 # todo_list.py, storage.py를 그대로 재사용한다.
 # 화면에 뭘 어떻게 보여줄지만 다를 뿐, 할 일을 추가/삭제/완료하는 로직은 동일하다.
+# 실행 방법 streamlit run app.py
 
 import streamlit as st
 from todo_List import todoList
@@ -45,7 +46,7 @@ else:
                 save_tasks(todo.tasks)
                 st.rerun()
 
-        with col2:
+        with col2:            
             if task.done:
                 st.markdown(f"~~{task.title}~~")   # 완료된 항목은 취소선으로 표시
             else:

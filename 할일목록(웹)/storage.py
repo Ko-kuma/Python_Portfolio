@@ -29,7 +29,7 @@ def load_tasks(filename=FILENAME) :
            data = json.load(f)
            #딕셔너리 목록을 다시 Task 인스턴스로 변환
            for item in data :
-               tasks.append(Taks(item["title"], item["done"]))
+               tasks.append(Task(item["title"], item["done"]))
     
     #첫 실행시 파일이 없는 경우 에러 방지
     except FileNotFoundError :
